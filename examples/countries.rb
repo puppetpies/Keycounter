@@ -8,7 +8,7 @@
 #
 ########################################################################
 
-
+require 'pp'
 require File.expand_path(File.join(
           File.dirname(__FILE__),
           "../lib/keycounter.rb"))
@@ -35,5 +35,5 @@ k.keycount("UK")
 k.keycount_reader("USA")
 
 # Display all values
-k.keycount_compile
+pp k.keycount_compile
  
