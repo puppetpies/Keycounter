@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Count up value totals"
   s.authors     = ["Brian Hood"]
   s.email       = 'brianh6854@googlemail.com'
-  s.files       = ["examples/countries.rb". "lib/keycounter.rb"]
+  s.files       = ["examples/countries.rb", "lib/keycounter.rb"]
   s.homepage    =
     'http://rubygems.org/gems/keycounter'
   s.license       = 'MIT'
