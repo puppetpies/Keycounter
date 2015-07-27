@@ -10,15 +10,33 @@
 
 class Keycounter
 
+  attr_writer :verbose
+  
+  def initialize
+    @verbose = true
+  end
+
   # Create / Add to instance variable
   def keycount(key)
     key.gsub!(" ", "_") # no spaces or case
-    if !instance_variable_get("@#{key}")
-      instance_variable_set("@#{key}", 1)
-    else
-      instance_variable_set("@#{key}", instance_variable_get("@#{key}") + 1)
+    begin
+      if !instance_variable_get("@#{key}")
+        instance_variable_set("@#{key}", 1)
+      else
+        begin
+          instance_variable_set("@#{key}", instance_variable_get("@#{key}") + 1)
+        rescue => e
+          puts "Cannot set instance variable of this name..."
+          pp e
+        end
+      end
+    rescue
+      puts "Cannot get instance variable of this name..."
+      pp e    
     end
-    puts "Key: #{key} Value: "+instance_variable_get("@#{key}").to_s
+    if @verbose == true
+      puts "Key: #{key} Value: "+instance_variable_get("@#{key}").to_s
+    end
   end
 
   # Read a single key
