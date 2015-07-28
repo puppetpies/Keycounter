@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'keycounter'
-  s.version     = '0.0.5'
+  s.version     = '0.0.7'
   s.date        = '2015-07-24'
   s.summary     = "Key value counter"
   s.description = "Count up value totals"
