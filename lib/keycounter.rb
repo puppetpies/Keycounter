@@ -34,7 +34,11 @@ class Keycounter
       puts "Cannot get instance variable of this name..."
       pp e    
     end
-    return [key, instance_variable_get("@#{key}")]
+    begin
+      return [key, instance_variable_get("@#{key}")]
+    rescue => e
+      pp e
+    end
    # if @verbose == true
    #   puts "Key: #{key} Value: "+instance_variable_get("@#{key}").to_s
    # end
