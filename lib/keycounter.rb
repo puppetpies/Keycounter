@@ -10,11 +10,11 @@
 
 class Keycounter
 
-  attr_writer :verbose
+  #attr_writer :verbose
   
-  def initialize
-    @verbose = true
-  end
+  #def initialize
+  #@verbose = true
+  #end
 
   # Create / Add to instance variable
   def keycount(key)
@@ -34,9 +34,10 @@ class Keycounter
       puts "Cannot get instance variable of this name..."
       pp e    
     end
-    if @verbose == true
-      puts "Key: #{key} Value: "+instance_variable_get("@#{key}").to_s
-    end
+    return [key, instance_variable_get("@#{key}")]
+   # if @verbose == true
+   #   puts "Key: #{key} Value: "+instance_variable_get("@#{key}").to_s
+   # end
   end
 
   # Read a single key
