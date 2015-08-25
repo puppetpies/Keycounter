@@ -56,7 +56,7 @@ class Keycounter
   end
   
   def keycount_stats(title="Stats:")
-    puts "#{title}: "
+    puts "#{title}"
     stats = keycount_compile
     pp stats.sort_by { |h| h[1] }
   end
