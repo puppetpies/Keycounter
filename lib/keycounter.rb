@@ -10,12 +10,6 @@
 
 class Keycounter
 
-  #attr_writer :verbose
-  
-  #def initialize
-  #@verbose = true
-  #end
-
   # Create / Add to instance variable
   def keycount(key)
     key.gsub!(" ", "_") # no spaces or case
@@ -39,9 +33,6 @@ class Keycounter
     rescue => e
       pp e
     end
-   # if @verbose == true
-   #   puts "Key: #{key} Value: "+instance_variable_get("@#{key}").to_s
-   # end
   end
 
   # Read a single key
@@ -61,7 +52,12 @@ class Keycounter
       keycounts << ["#{t}", instance_variable_get("#{n}")]
     }
     return keycounts
-    keycounts
+  end
+  
+  def keycounter_stats(title="Stats:")
+    puts "#{title}: "
+    stats = keycount_compile
+    pp stats.sort_by { |h| h[1] }
   end
 
 end
