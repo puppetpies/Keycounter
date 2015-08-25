@@ -7,6 +7,7 @@
 # A Simple counter using just instance variables 
 #
 ########################################################################
+require 'pp'
 
 class Keycounter
 
@@ -54,7 +55,7 @@ class Keycounter
     return keycounts
   end
   
-  def keycounter_stats(title="Stats:")
+  def keycount_stats(title="Stats:")
     puts "#{title}: "
     stats = keycount_compile
     pp stats.sort_by { |h| h[1] }
