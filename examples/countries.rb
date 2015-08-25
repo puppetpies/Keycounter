@@ -36,4 +36,5 @@ k.keycount_reader("USA")
 
 # Display all values
 pp k.keycount_compile
+k.keycount_stats
  
