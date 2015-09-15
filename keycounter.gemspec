@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'keycounter'
-  s.version     = '0.0.8'
-  s.date        = '2015-08-26'
+  s.version     = '0.0.9'
+  s.date        = '2015-09-15'
   s.summary     = "Key Counter"
   s.description = "Counter for reoccuring data using instance variables"
   s.authors     = ["Brian Hood"]

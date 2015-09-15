@@ -43,6 +43,11 @@ class Keycounter
     return valnum
   end
 
+  # Reset a key to zero
+  def keycount_reset(key)
+    instance_variable_set("@#{key}", 0)
+  end
+  
   # Compile in array with the totals of all instance variables
   def keycount_compile
     keycounts = Array.new
