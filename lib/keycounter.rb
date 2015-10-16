@@ -61,4 +61,8 @@ class Keycounter
     pp stats.sort_by { |h| h[1] }
   end
 
+  def keycount_reset(key)
+    instance_variable_set("@#{key}", 0)
+  end
+  
 end
