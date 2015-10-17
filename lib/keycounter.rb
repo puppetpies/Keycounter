@@ -65,7 +65,7 @@ class Keycounter
     instance_variable_set("@#{key}", 0)
   end
   
-  def keycounter_remove(key)
+  def keycount_remove(key)
     remove_instance_variable("@#{key}")
   end
   
