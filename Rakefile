@@ -5,7 +5,7 @@ VERSION = Keycounter::VERSION::STRING
 Gem::Specification.new do |s|
   s.name        = 'keycounter'
   s.version     = VERSION
-  s.date        = '2016-01-29"
+  s.date        = '2016-01-29'
   s.summary     = "Key Counter"
   s.description = "Counter for reoccuring data using instance variables"
   s.authors     = ["Brian Hood"]
